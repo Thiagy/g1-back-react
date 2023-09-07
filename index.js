@@ -18,10 +18,6 @@ app.use(bodyParser.json({ limit: '100mb' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rota para exibir "Hello World" ao acessar o caminho "/"
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
 
 // Rotas
 app.use('/', news);
