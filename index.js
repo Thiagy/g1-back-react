@@ -8,7 +8,12 @@ const marketing = require('./routes/marketing')
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://g1-front-react.vercel.app',
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json({ limit: '100mb' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
