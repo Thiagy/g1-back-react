@@ -9,7 +9,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 
 const corsOptions = {
-  origin: 'https://g1-front-react.vercel.app',
+  origin: '*',
   optionsSuccessStatus: 200,
 };
 
